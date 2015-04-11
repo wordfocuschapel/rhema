@@ -1,3 +1,22 @@
-<h2 id="title">Welcome to Ember.js</h2>
 
-{{outlet}}
+
+<div class="sidebar">
+  <h2>Rhema</h2>
+  <ul>
+    {{#each topic in model}}
+      <li>{{topic.title}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="main">
+  <strong>Scriptures on topics of interest</strong>
+  {{input type="text" data-toggle="tooltip" data-placement="bottom" title="topic" placeholder="search any topic"}}
+  {{outlet}}
+
+  <footer>
+    <hr/>
+    &copy; 2015 Rhema
+  </footer>
+</div>
+

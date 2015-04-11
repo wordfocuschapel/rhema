@@ -2,8 +2,10 @@ import Ember from 'ember';
 import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
 import config from './config/environment';
+import DS from 'ember-data';
 
-var App;
+var App // = Ember.Application.create();
+// App.ApplicationAdapter = DS.FixtureAdapter;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
