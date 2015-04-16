@@ -7,27 +7,6 @@ import DS from "ember-data";
 //  videos:       DS.hasMany('video'),  
 // });
 
-//{
- // "post": {
- //   "id": 1,
- //   "title": "Node is not omakase",
- //   "comments": [1, 2, 3]
- // },
-
-  //"comments": [{
- //    "id": 1,
- //   "body": "But is it _lightweight_ omakase?"
- // },
- // {
- //   "id": 2,
-//    "body": "I for one welcome our new omakase overlords"
-//  },
-//  {
-//    "id": 3,
-//    "body": "Put me on the fast track to a delicious dinner"
-//  }]
-//}
-
 var Topic = DS.Model.extend({
   title:        DS.attr( 'string' ),
   scriptures:   DS.hasMany( 'scripture' ),

@@ -1,22 +1,24 @@
-
-
+<div class="container">
 <div class="sidebar">
   <h2>Rhema</h2>
-  <ul>
-    {{#each topic in model}}
-      <li>{{topic.title}}</li>
-    {{/each}}
-  </ul>
+  {{outlet}}
 </div>
 
 <div class="main">
+{{#if showBanner}}
+  <div class="banner">
+    This is a collaborative project. Please send topics and scriptures.
+  </div>
+{{/if}}
+
   <strong>Scriptures on topics of interest</strong>
   {{input type="text" data-toggle="tooltip" data-placement="bottom" title="topic" placeholder="search any topic"}}
-  {{outlet}}
+  {{topic}}
 
+  
   <footer>
     <hr/>
-    &copy; 2015 Rhema
+         &copy; 2015 Rhema
   </footer>
 </div>
-
+</div>

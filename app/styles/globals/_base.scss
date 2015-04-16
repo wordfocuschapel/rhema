@@ -1,0 +1,187 @@
+body {
+  color: $text-color;
+  font-family: $sans-serif;
+  font-size: 18px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  margin-right: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+}
+
+h1, h2, h3 {
+  color: $header-color;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.4em;
+  margin-bottom: 20px;
+}
+
+strong {
+  font-weight: 500;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  @include transition();
+  color: $anchor-color;
+  cursor: pointer;
+  text-decoration: underline;
+  &:hover {
+    color: $anchor-hover-color;
+  }
+}
+
+input {
+  box-sizing: border-box;
+  font-family: $sans-serif;
+  margin-top: 5px;
+}
+
+textarea {
+  border: 1px solid #CCC;
+  box-shadow: inset 0px 1px 1px #DDD;
+  box-sizing: border-box;
+  font-family: $sans-serif;
+  font-size: 16px;
+}
+
+button {
+  @include transition();
+  background: $button-background-positive;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: inset 0px 1px 1px lighten($button-background-positive, 15%), 0px 1px 1px #DDD;
+  &, a, a:hover {
+    color: #FFF;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  padding: 10px 20px;
+  text-shadow: 0px 1px 0px $button-hover-background-positive;
+  &:hover {
+    background: $button-hover-background-positive;
+  }
+  &.negative {
+    background: $button-background-negative;
+    box-shadow: inset 0px 1px 1px lighten($button-background-negative, 15%), 0px 1px 1px #DDD;
+    text-shadow: 0px 1px 0px $button-hover-background-negative;
+    &:hover {
+      background: $button-hover-background-negative;
+    }
+  }
+  &.flag {
+    background: $button-background-flag;
+    box-shadow: inset 0px 1px 1px lighten($button-background-flag, 15%), 0px 1px 1px #DDD;
+    text-shadow: 0px 1px 0px $button-hover-background-flag;
+    &:hover {
+      background: $button-hover-background-flag;
+    }
+  }
+  &.skip {
+    background: $button-background-skip;
+    box-shadow: inset 0px 1px 1px lighten($button-background-skip, 15%), 0px 1px 1px #DDD;
+    text-shadow: 0px 1px 0px $button-hover-background-skip;
+    &:hover {
+      background: $button-background-skip;
+    }
+  }
+  &[disabled] {
+    background: #CCC;
+    box-shadow: none;
+    color: #AAA;
+    cursor: inherit;
+    text-shadow: none;
+  }
+}
+
+.search, .topicList, .wrapper {
+  margin: auto;
+  @media screen and (min-width: $large) {
+    max-width: 740px;
+  }
+  @media screen and (max-width: $large) {
+    max-width: 500px;
+  }
+  // @media screen and (max-width: $small) {
+  //   width: 100%;
+  // }
+}
+
+.search {
+  padding: 0px 20px;
+}
+
+.wrapper {
+  padding: 40px 20px;
+  position: relative;
+  @media screen and (max-width: $small) {
+    width: 90%;
+  }
+}
+
+.table-wrapper {
+  margin: auto;
+  padding: 40px 0px;
+  position: relative;
+  @media screen and (min-width: $large) {
+    max-width: 740px;
+  }
+  @media screen and (max-width: $large) {
+    max-width: 90%;
+  }
+}
+
+.animated {
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  transition: height 0.2s;
+}
+
+html, body, body > div, .main-content, .content, .messages {
+  height: 100%;
+} 
+
+.mainArea {
+  overflow: hidden;
+ }
+
+.content, .message-list {
+  overflow: auto;
+}
+
+
+// Ember  thing to make actions clickable
+notification, [data-ember-action] {
+  cursor: pointer;
+}

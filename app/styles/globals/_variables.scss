@@ -1,0 +1,82 @@
+$serif: Garamond, serif;
+$sans-serif: "Avenir Next", sans-serif;
+
+// Screen sizes
+$chat-width: 300px;
+
+$large: 1200px;
+$medium: 940px;
+$header-medium: 780px;
+$med-small: 670px;
+$small: 550px;
+
+$large-chat: $large + $chat-width;
+
+// Colours
+
+$black: #100B00;
+$lime: #81C14B;
+$dark-green: #3E5641;
+$mint: #AFE0A1;
+$yellow: #EEE82C;
+$taupe: #929487;
+$light-grey: #ECECEC;
+$red: #BF2719;
+$light-green: lighten($dark-green, 20%);
+$lightest-green: lighten($dark-green, 69%);
+
+$brown: #6B6054;
+
+$purple: #54428E;
+$blue: #7C99B4;
+$dark-blue: #010D2A;
+
+// Colour Uses
+
+$header-color: $dark-green;
+$header-background: $light-grey;
+$sign-in-color: $lime;
+
+$menu-background: $light-grey;
+$menu-color: $dark-green;
+
+$body-background: #FFF;
+$text-color: $black;
+
+$footer-color: $dark-green;
+$footer-background: $light-grey;
+
+$anchor-color: $lime;
+$anchor-hover-color: darken($lime, 10%);
+
+$maybe-color: $taupe;
+
+$notification-background: $lime;
+$notification-color: #FFF;
+
+$button-background-positive: $lime;
+$button-hover-background-positive: darken($lime, 10%);
+
+$button-background-negative: $dark-green;
+$button-hover-background-negative: darken($dark-green, 10%);
+
+$button-background-flag: $red;
+$button-hover-background-flag: darken($red, 10%);
+
+$button-background-skip: $maybe-color;
+$button-hover-background-skip: darken($maybe-color, 10%);
+
+$module-border: $dark-green;
+
+$dropdown-anchor-color: $dark-green;
+
+// For positive/negative styles for votes and proposals
+
+$positive-background: $lightest-green;
+$positive-color: $light-green;
+
+$negative-color: $red;
+
+$footer-color: $dark-green;
+$footer-hover-color: lighten($dark-green, 10%);
+$footer-background: $light-grey;

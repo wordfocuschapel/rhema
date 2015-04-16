@@ -1,0 +1,26 @@
+<div class="wrapper home">
+  <h2>Scriptures and spiritual resources on topics of interests</h2>
+
+  <section>
+    <div class="header">
+      <h3></h3>
+    </div>
+    <p>
+      Search topics of your interests and see results ranging 
+      from scriptures to prayers to sermon and music videos.
+      Do you have topics or resources that you think would help
+      someone? Feel free to post it.
+    </p>
+  </section>
+
+  <section>
+    <div class="topics">
+    <strong>Topics</strong>
+    <ul>
+        {{#each topic in model}}
+          <li>{{topic.title}}</li>
+        {{/each}}
+      </ul>  
+    </div>
+  </section>
+</div>

@@ -1,0 +1,55 @@
+@mixin transition($time: 0.5s, $type: all) {
+  -webkit-transition: $type $time ease;
+     -moz-transition: $type $time ease;
+      -ms-transition: $type $time ease;
+       -o-transition: $type $time ease;
+          transition: $type $time ease;
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+       -o-transform: rotate($deg);
+          transform: rotate($deg);
+}
+
+
+@mixin media-max-width($width) {
+  @media screen and (max-width: #{$width}) {
+    @content;
+  }
+  .show-panel & {
+    @media screen and (max-width: #{$width + $chat-width}) {
+      @content;
+    }
+  }
+}
+
+@mixin media-min-width($width) {
+  @media screen and (min-width: #{$width}) {
+    @content;
+  }
+  .show-panel & {
+    @media screen and (min-width: #{$width + $chat-width}) {
+      @content;
+    }
+  }
+}
+
+@mixin underline($color: $lime) {
+  position: relative;
+  &:after {
+    @include transition;
+    border-bottom: 2px solid $color;
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    margin-top: -1px;
+    opacity: 0;
+    width: 100%;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
+}
