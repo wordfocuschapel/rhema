@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('topics', {path: "/"});
-  this.route('topic', {path: ":post_id" });
+  this.route('topic', {path: "/topic/:topic_id" });
   //this.resource("topics", {path: "/"});
   //this.resource("index", {path: "/"});
 

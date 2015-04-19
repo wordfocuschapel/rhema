@@ -39,3 +39,17 @@ html, body {
   background-color: #ccc;
 }
 
+.tabs {
+  a {
+    @include transition(0s);
+    color: #ccc;
+    padding: 5px 10px 0px;
+    margin-right: 20px;
+    text-decoration: none;
+    &.active {
+      border-bottom: 2px solid #fff;
+      background: #FFF;
+      box-shadow: none;
+    }
+  }
+}

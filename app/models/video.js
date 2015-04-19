@@ -1,9 +1,34 @@
 import DS from "ember-data";
 
-export default DS.Model.extend({
-  title: 	DS.attr( 'string' ),
+var Video = DS.Model.extend({
+  // title: 	DS.attr( 'string' ),
   link: 	DS.attr( 'string' ),
-  topic: 	DS.belongsTo( 'topic' )
+  topics: 	DS.hasMany( 'topic' )
 });
 
-//export default Video;
+Video.reopenClass({
+  FIXTURES: [
+  	{
+      id: 1,
+      link: 'https://www.youtube.com/embed/6HprCf2ATp8',
+      topics: 1
+  	},
+  	{
+  	  id: 2,
+      link: 'https://www.youtube.com/embed/6HprCf2ATp8',
+      topics: [2,5]
+  	},
+  	{
+  	  id: 3,
+      link: 'https://www.youtube.com/embed/6HprCf2ATp8',
+      topics: [5,8]
+  	},
+  	{
+  	  id: 4,
+      link: 'https://www.youtube.com/embed/6HprCf2ATp8',
+      topics: [6,9,10]	
+  	}
+  ]
+ });  	
+
+export default Video;

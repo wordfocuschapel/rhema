@@ -1,8 +1,63 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
+var Prayer = DS.Model.extend({
   point: DS.attr( 'string' ),
-  topic: DS.belongsTo( 'topic' )
+  topics: DS.hasMany( 'topic' )
 });
 
-//export default Prayer;
+Prayer.reopenClass({
+  FIXTURES: [
+    { 
+      id: 1,
+      point: '',
+      topics: []
+    },
+    { 
+      id: 2,
+      point: '',
+      topics: []
+    },
+    { 
+      id: 3,
+      point: '',
+      topics: []
+    },
+    { 
+      id: 4,
+      point: '',
+      topics: []
+    },
+    { 
+      id: 5,
+      point: '',
+      topics: []
+    },
+    { 
+      id: 6,
+      point: '',
+      topics: []
+    },
+    { 
+      id: 7,
+      point: '',
+      topics: []
+    },
+    { 
+      id: 8,
+      point: '',
+      topics: []
+    },
+    { 
+      id: 9,
+      point: '',
+      topics: []
+    },
+    { 
+      id: 10,
+      point: '',
+      topics: []
+    }
+  ]
+});
+
+export default Prayer;
