@@ -11,7 +11,8 @@ var Topic = DS.Model.extend({
   title:        DS.attr( 'string' ),
   scriptures:   DS.hasMany( 'scripture' ),
   prayers:      DS.hasMany( 'prayer' ),
-  videos:       DS.hasMany('video'),  
+  videos:       DS.hasMany('video'),
+  resources:    DS.hasMany('resource')  
 });
 
 Topic.reopenClass({
